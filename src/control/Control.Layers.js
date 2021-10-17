@@ -99,7 +99,7 @@ export var Layers = Control.extend({
 		this._update();
 
 		this._map = map;
-		map.on('zoomend', this._checkDisabledLayers, this);
+		map.on('zoomend in', this._checkDisabledLayers, this);
 
 		for (var i = 0; i < this._layers.length; i++) {
 			this._layers[i].layer.on('add remove', this._onLayerChange, this);
